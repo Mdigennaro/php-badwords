@@ -4,6 +4,9 @@ $name = 'Ben Parker';
 
 $citation = 'Da un grande potere derivano grandi responsabilità.';
 
+var_dump($_GET);
+
+$censura = str_replace('potere', $_GET['block'], $citation)
 
 ?>
 
@@ -25,6 +28,21 @@ $citation = 'Da un grande potere derivano grandi responsabilità.';
   <?php echo $citation; ?> 
 </p>
 
+<div>
+  Il nome dell'autore è lungo : <?php echo strlen($name); ?> caratteri.
+</div>
+
+<div>
+  Il paragrafo della citazione è lungo : <?php echo strlen($citation); ?> caratteri.
+</div>
+
+<p> 
+  <?php echo $censura ?> 
+</p>
+
+<div>
+  Il paragrafo della citazione è lungo : <?php echo strlen($censura); ?> caratteri.
+</div>
 
 </body>
 </html>
